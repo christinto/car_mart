@@ -1,3 +1,6 @@
+//harish wrote this from scratch from jquery
+//from github/trufflesuite/truffle-contract library
+
 App = {
   web3Provider: null,
   contracts: {},
@@ -33,6 +36,7 @@ App = {
       //return App.getBalances();
     });
 
+      //jquery triggers
     return App.bindEvents();
   },
 
