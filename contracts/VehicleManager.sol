@@ -1,3 +1,5 @@
+//irl one admin. Not registering yourself.
+
 pragma solidity ^0.4.15;
 contract VehicleManager {
 
