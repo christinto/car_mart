@@ -1,4 +1,6 @@
 //irl one admin. Not registering yourself.
+// we will need to query our contract...
+//
 
 pragma solidity ^0.4.15;
 contract VehicleManager {
@@ -31,11 +33,10 @@ contract VehicleManager {
         }
 
         function registerVehicle(bytes32 _vin,string _year,string _model,string _make,string _vonwer) isOwner(msg.sender) public {
-
             require(!isVehicle(_vin));
             vins.push(_vin);
             vehicleMap[_vin] = Vehicle(_vin,_year,_model, _make,_vonwer, 1);
-        }
+		}
 
         function isVehicle(bytes32 _id) public constant returns(bool) {
 		if (vehicleMap[_id].status != 0) {
